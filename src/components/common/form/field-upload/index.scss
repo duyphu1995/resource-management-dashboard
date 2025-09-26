@@ -1,0 +1,63 @@
+.upload-file-content {
+    position: relative;
+
+    .upload-file {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        outline: $color-grey-light solid 1px;
+        background-color: $color-white;
+        border-radius: 4px;
+        padding: 4px 16px;
+
+        .btn--upload {
+            width: 125px !important;
+            height: 32px !important;
+        }
+
+        .upload-file__container {
+            display: flex;
+            margin: 8px;
+            width: 94px;
+
+            .upload-file__name {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            .upload-file__action {
+                cursor: pointer;
+                position: absolute;
+                right: 8px;
+            }
+        }
+    }
+
+    .placeholder-upload-file {
+        position: absolute;
+        left: 149px;
+        top: 10px;
+        color: #dfdfdf;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .upload-file__limit {
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .upload-file__limit-text {
+            margin: 0;
+            padding: 5px 0;
+        }
+    }
+}
+
+.ant-form-item-has-error {
+    .upload-file {
+        outline: $color-red solid 1px;
+    }
+}

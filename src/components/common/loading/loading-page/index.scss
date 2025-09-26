@@ -1,0 +1,109 @@
+.loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+
+    height: 100vh;
+    width: 100vw;
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .loading-logo {
+        display: block;
+        width: 120px;
+        height: auto;
+    }
+
+    .loading-dots-container {
+        position: absolute;
+        left: calc(50% - 52px);
+        bottom: calc(50% - 32px);
+
+        .loading-dots {
+            display: flex;
+            gap: 4px;
+            padding: 0 0 4px 0;
+            background: white;
+
+            .loading-dot {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+
+                &.red {
+                    background: red;
+                    animation: dot_red 1s ease infinite;
+
+                    @keyframes dot_red {
+                        0% {
+                            background: #e4e4e4;
+                        }
+                        15% {
+                            background: #e4e4e4;
+                        }
+                        25% {
+                            background: red;
+                        }
+                        90% {
+                            background: red;
+                        }
+                        100% {
+                            background: #e4e4e4;
+                        }
+                    }
+                }
+
+                &.primary {
+                    background: $bg-primary;
+                    animation: dot_primary 1s ease infinite;
+
+                    @keyframes dot_primary {
+                        0% {
+                            background: #e4e4e4;
+                        }
+                        40% {
+                            background: #e4e4e4;
+                        }
+                        50% {
+                            background: $bg-primary;
+                        }
+                        90% {
+                            background: $bg-primary;
+                        }
+                        100% {
+                            background: #e4e4e4;
+                        }
+                    }
+                }
+
+                &.green {
+                    background: #25a942;
+                    animation: dot_green 1s ease infinite;
+
+                    @keyframes dot_green {
+                        0% {
+                            background: #e4e4e4;
+                        }
+                        65% {
+                            background: #e4e4e4;
+                        }
+                        75% {
+                            background: #25a942;
+                        }
+                        90% {
+                            background: #25a942;
+                        }
+                        100% {
+                            background: #e4e4e4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

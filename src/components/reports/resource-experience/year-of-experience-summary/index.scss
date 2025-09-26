@@ -1,0 +1,16 @@
+.year-of-experience {
+    &__generated-at {
+        color: #333;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 600;
+    }
+
+    .ant-table-thead {
+        .ant-table-cell {
+            text-align: center;
+            color: #00a1e9 !important;
+        }
+    }
+}

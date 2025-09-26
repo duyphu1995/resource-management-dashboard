@@ -1,0 +1,10 @@
+.chart-experience-summary {
+    position: relative;
+
+    & > button {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        z-index: 9;
+    }
+}

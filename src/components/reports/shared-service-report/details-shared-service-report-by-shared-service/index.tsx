@@ -1,0 +1,114 @@
+import { useCallback, useEffect, useState } from 'react';
+import { Button, DatePicker, Form, TableColumnType } from 'antd';
+import dayjs from 'dayjs';
+import DetailContent from '@/components/common/detail-management/detail-content';
+import BaseTable from '@/components/common/table/table';
+import { renderWithFallback } from '@/components/common/table/render-data-table-common';
+import { IDetailsBySharedService, ISharedServiceValues } from '@/types/reports/shared-service-report';
+import { formatDataTable, formatNumberWithDecimalPlaces } from '@/utils/common';
+import useNotify from '@/utils/hook/useNotify';
+import { TIME_FORMAT } from '@/utils/constants';
+import sharedServiceReport from '@/services/reports/shared-service-report';
+import './index.scss';
+import useLoading from '@/utils/hook/useLoading';
+
+const DetailsBySharedService = () => {
+    const [form] = Form.useForm();
+    const { showNotification } = useNotify();
+    const { isLoading, turnOnLoading, turnOffLoading } = useLoading();
+
+    const [dataReport, setDataReport] = useState<IDetailsBySharedService[]>([]);
+
+    const columns: TableColumnType<IDetailsBySharedService>[] = [
+        {
+            dataIndex: 'unitName',
+            key: 'unitName',
+            title: 'BU',
+            width: 150,
+            align: 'center',
+            render: value => renderWithFallback(value)
+        },
+        {
+            dataIndex: 'dcName',
+            key: 'dcName',
+            title: 'DC',
+            width: 150,
+            align: 'center',
+            render: (value, record) => (record.isSharedServiceUnit ? '' : renderWithFallback(value))
+        },
+        {
+            dataIndex: 'projectName',
+            key: 'projectName',
+            title: 'Project',
+            width: 150,
+            align: 'center',
+            render: (value, record) => (record.isSharedServiceUnit ? '' : renderWithFallback(value))
+        },
+        {
+            dataIndex: 'billable',
+            key: 'billable',
+            title: 'Shared Service (Man-Month)',
+            width: 150,
+            align: 'center',
+            render: value => formatNumberWithDecimalPlaces(value)
+        }
+    ];
+
+    const fetchData = useCallback(
+        async (values: ISharedServiceValues) => {
+            turnOnLoading();
+            try {
+                const { fromDate, toDate } = values;
+                const response = await sharedServiceReport.getListDetailsBySharedService({
+                    fromDate: fromDate.format(TIME_FORMAT.DATE),
+                    toDate: toDate.format(TIME_FORMAT.DATE)
+                });
+
+                const { data, succeeded } = response;
+                if (succeeded) {
+                    setDataReport(formatDataTable(data));
+                }
+            } catch (error) {
+                showNotification(false, 'Fetched data failed');
+            } finally {
+                turnOffLoading();
+            }
+        },
+        [showNotification, turnOnLoading, turnOffLoading]
+    );
+
+    useEffect(() => {
+        fetchData(form.getFieldsValue());
+    }, [fetchData, form]);
+
+    const rowClassName = (record: IDetailsBySharedService) => (record.isSharedServiceUnit ? 'shared-service-row' : '');
+
+    return (
+        <DetailContent rootClassName="detail-shared-service-by-shared-service">
+            <Form form={form} onFinish={fetchData} className="shared-service-report__filter">
+                <Form.Item label="From" name="fromDate" initialValue={dayjs().startOf('year')}>
+                    <DatePicker format={TIME_FORMAT.US_DATE} allowClear={false} />
+                </Form.Item>
+                <Form.Item label="To" name="toDate" initialValue={dayjs()}>
+                    <DatePicker format={TIME_FORMAT.US_DATE} allowClear={false} />
+                </Form.Item>
+                <Button htmlType="submit" type="primary">
+                    Search
+                </Button>
+            </Form>
+            <div className="shared-service-report__table">
+                <BaseTable
+                    dataSource={formatDataTable(dataReport)}
+                    columns={columns}
+                    loading={isLoading}
+                    pagination={false}
+                    scroll={{ x: 'max-content', y: 649 }}
+                    bordered
+                    rowClassName={rowClassName}
+                />
+            </div>
+        </DetailContent>
+    );
+};
+
+export default DetailsBySharedService;

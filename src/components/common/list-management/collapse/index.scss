@@ -1,0 +1,143 @@
+.collapse-container {
+    /* -------------------------- START VARIABLES -------------------------- */
+    $collapse-container-gap: 16px;
+    $collapse-container-box-shadow: 0px 1px 3px 0px #edf0f5;
+
+    // Collapse Start
+    $collapse-start-width: 228px;
+    $collapse-start-collapsed-width: 28px;
+    $collapse-start-collapsed-padding-x: 14px;
+    $collapse-start-collapsed-padding-y: 24px;
+    $collapse-start-collapsed-padding: $collapse-start-collapsed-padding-y $collapse-start-collapsed-padding-x;
+    $collapse-start-padding: 24px;
+    $collapse-start-container-box-shadow: $collapse-container-box-shadow;
+    $collapse-start-container-hover-box-shadow: 2px 1px 6px 0px rgba(0, 0, 0, 0.04);
+
+    // Collapse start Content
+    $collapse-start-content-collapsed-width: calc($collapse-start-width - $collapse-start-padding * 2);
+    $collapse-start-content-width: calc($collapse-start-width - $collapse-start-padding * 2);
+
+    // Collapse End
+    $collapse-end-collapsed-width: calc(100% - $collapse-start-collapsed-width);
+    $collapse-end-width: calc(100% - $collapse-start-width - $collapse-container-gap);
+    /* -------------------------- END VARIABLES -------------------------- */
+
+    position: relative;
+    display: flex;
+    gap: $collapse-container-gap;
+    justify-content: flex-end;
+    min-height: 100%;
+
+    .collapse-start-container {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        height: 100%;
+
+        background: white;
+        box-shadow: $collapse-container-box-shadow;
+        border-radius: 4px;
+        padding: $collapse-start-collapsed-padding;
+        width: $collapse-start-collapsed-width;
+        min-height: 100%;
+        transition: all 0.5s ease;
+
+        .collapse-start-content-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            .collapse-start-content {
+                width: $collapse-start-content-collapsed-width;
+                height: 100%;
+            }
+        }
+
+        &:hover {
+            padding: $collapse-start-padding;
+            width: $collapse-start-width;
+            box-shadow: $collapse-start-container-hover-box-shadow;
+            animation: collapse-start-anim 1s forwards;
+
+            @keyframes collapse-start-anim {
+                0% {
+                    position: absolute;
+                    left: 0;
+                    z-index: 1;
+                    height: 100%;
+                }
+
+                100% {
+                    position: absolute;
+                    left: 0;
+                    z-index: 1;
+                    height: 100%;
+                }
+            }
+        }
+
+        .collapse-start-collapse-button-container {
+            position: absolute;
+            top: 24px;
+            right: -12px;
+            border-radius: 50%;
+            padding: 4px;
+            display: flex;
+            background: #f8f8f8;
+
+            .collapse-start-collapse-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border: 1px solid #dfdfdf;
+                border-radius: 50%;
+                padding: 0;
+                background: white;
+
+                min-width: unset;
+                width: 22px;
+                max-width: 22px;
+                height: 22px;
+                box-shadow: unset;
+                outline: unset !important;
+
+                &:hover {
+                    border: 1px solid $border-color-primary;
+                    background: $bg-primary-light;
+                }
+            }
+        }
+    }
+
+    &:not(.collapse-start-collapsed) {
+        .collapse-start-container {
+            padding: $collapse-start-padding;
+            width: $collapse-start-width;
+
+            .collapse-start-collapse-button-container {
+                .collapse-start-collapse-button {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+
+        .collapse-end {
+            width: $collapse-end-width;
+        }
+    }
+
+    .collapse-end {
+        position: relative;
+        z-index: 0;
+
+        background: $bg-white;
+        box-shadow: $collapse-container-box-shadow;
+
+        border-radius: 4px;
+        padding: 24px;
+        width: calc(100% - $collapse-start-collapsed-width - $collapse-container-gap);
+
+        transition: all 0.5s ease;
+    }
+}

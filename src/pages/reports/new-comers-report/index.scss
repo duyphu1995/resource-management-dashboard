@@ -1,0 +1,40 @@
+.new-comers-report-container {
+    .new-comers-report-table {
+        th {
+            background-color: $color-whisper !important;
+            &:hover {
+                background-color: #eaeaea !important;
+                cursor: pointer;
+            }
+        }
+
+        tr {
+            td {
+                padding: 0px 16px !important;
+                min-width: 64px;
+                min-height: 40px;
+                height: 40px;
+
+                &:hover {
+                    background-color: #eaeaea !important;
+                    cursor: pointer;
+                }
+
+                .popover {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 9px 16px;
+                }
+            }
+        }
+    }
+
+    .ant-col {
+        max-width: 300px !important;
+    }
+
+    .ant-select-item-option-disabled {
+        color: #ebebe4 !important;
+    }
+}

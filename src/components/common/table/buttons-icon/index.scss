@@ -1,0 +1,27 @@
+.buttons-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    &.flex-start {
+        justify-content: start;
+    }
+
+    .button-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+    }
+
+    .table-action {
+        width: 20px;
+        height: 20px;
+    }
+}

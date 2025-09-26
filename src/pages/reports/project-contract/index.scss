@@ -1,0 +1,50 @@
+.project-contract {
+    .ant-tabs-nav {
+        margin: 0 auto 24px auto;
+        position: relative;
+        width: 480px;// fix lag on firefog
+
+        .sub-tab-extra {
+            position: absolute;
+            right: -48px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            cursor: pointer;
+            color: $color-primary;
+            font-size: 24px;
+        }
+    }
+
+    .ant-table-thead {
+        .ant-table-cell {
+            text-align: center !important;
+            text-wrap: auto !important;
+        }
+    }
+}
+
+.form-modal {
+    display: flex;
+    gap: 12px 48px;
+    flex-wrap: wrap;
+
+    .ant-form-item {
+        width: calc(50% - 24px);
+
+        .ant-form-item-label {
+            width: fit-content !important;
+            min-width: 180px;
+
+            & > label {
+                padding-right: 12px;
+            }
+        }
+
+        .ant-input-number,
+        .ant-input-number-input-wrap,
+        .ant-input-number-input {
+            width: 100%;
+        }
+    }
+}

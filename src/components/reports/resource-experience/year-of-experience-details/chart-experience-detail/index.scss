@@ -1,0 +1,96 @@
+.chart-experience-detail {
+    .filter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .config-container {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 30px;
+            align-items: center;
+
+            .ant-form-item-control {
+                width: 240px !important;
+                flex: none;
+            }
+        }
+
+        .ant-form-item-label {
+            width: fit-content !important;
+        }
+
+        .choose-year {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .footer-config {
+            color: #cc3300;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+
+        & > div {
+            width: 70%;
+
+            &:last-child {
+                width: 30%;
+            }
+        }
+
+        .chart-experience-detail__table {
+            margin-top: 24px;
+
+            .ant-table-thead {
+                th {
+                    color: #000 !important;
+
+                    &:first-child,
+                    &:last-child {
+                        background-color: #0c7cbc !important;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: #008000 !important;
+                    }
+
+                    &:nth-child(3) {
+                        background-color: #aa4643 !important;
+                    }
+
+                    &:nth-child(4) {
+                        background-color: #80699b !important;
+                    }
+
+                    &:nth-child(5) {
+                        background-color: #ff8d1a !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .ant-table-wrapper .ant-table-bordered .ant-table-container table {
+        thead tr th {
+            border-inline-end: none !important;
+
+            &:first-child {
+                border-inline-end: 1px solid #d9d9d9 !important;
+                border-left: none !important;
+            }
+        }
+
+        tbody tr td {
+            &:first-child {
+                border-inline-end: 1px solid #d9d9d9 !important;
+            }
+        }
+    }
+}

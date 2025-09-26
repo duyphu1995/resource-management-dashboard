@@ -1,0 +1,44 @@
+.ant-popover {
+    .ant-popover-content {
+        .ant-popover-inner {
+            max-width: 363px;
+            width: 363px;
+            height: auto;
+
+            padding: 24px;
+            .ant-popover-title {
+                border-bottom: 1px solid #dfdfdf;
+                padding-bottom: 16px;
+
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            .ant-popover-inner-content {
+                max-height: 220px;
+                overflow-y: auto;
+
+                .info-report {
+                    display: flex;
+                    flex-direction: row;
+
+                    &:hover {
+                        background-color: #f8f8f8;
+                    }
+
+                    div:first-child {
+                        width: 55%;
+                    }
+                    div:last-child {
+                        width: 45%;
+                    }
+
+                    div {
+                        padding: 10px 16px;
+                    }
+                }
+            }
+        }
+    }
+}

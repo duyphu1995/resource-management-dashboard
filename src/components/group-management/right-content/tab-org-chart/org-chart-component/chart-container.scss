@@ -1,0 +1,23 @@
+/* global styles for org-chart */
+.org-chart-container {
+    box-sizing: border-box;
+    position: relative;
+    height: calc(100vh - 300px);
+    background-color: $bg-gray;
+    border: 2px solid $border-color-grey;
+    border-radius: 5px;
+    overflow: auto;
+    text-align: center;
+
+    .hidden {
+        display: none !important;
+    }
+
+    .org-chart {
+        box-sizing: border-box;
+        display: inline-block;
+        background-size: 10px 10px;
+        border: 1px dashed rgba(0, 0, 0, 0);
+        padding: 20px 20px 0 20px;
+    }
+}

@@ -1,0 +1,104 @@
+.chart-management {
+    display: flex;
+
+    .chart-left-content {
+        padding: 24px;
+        border-radius: 4px;
+        background-color: #fff;
+
+        .box-search {
+            margin-bottom: 24px;
+
+            &:hover {
+                .box-search-icon {
+                    border-color: $bg-primary;
+                }
+
+                .box-search-input {
+                    .ant-select-selector {
+                        border-color: $bg-primary;
+                    }
+                }
+            }
+
+            .box-search-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                border: 1px solid $border-color-grey;
+                border-right: none;
+                border-radius: 4px 0 0 4px;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            .box-search-active {
+                border: 1px solid $color-primary;
+                border-right: none;
+            }
+
+            .box-search-input {
+                width: calc(100% - 40px) !important;
+
+                .ant-select-selector {
+                    padding: 0 12px 0 16px !important;
+                    border-radius: 0 4px 4px 0;
+                    transition: none;
+                }
+            }
+        }
+
+        .ant-tree-node-content-wrapper {
+            width: inherit;
+            margin-right: 30px;
+            white-space: nowrap;
+        }
+    }
+
+    .chart-right-content {
+        padding: 24px;
+        border-radius: 4px;
+        background-color: #fff;
+        height: fit-content;
+    }
+}
+
+.sample-drag-bar {
+    flex-shrink: 0;
+    width: 12px;
+    background-color: $bg-gray;
+    cursor: ew-resize;
+    transition: background-color 0.15s 0.15s ease-in-out;
+    position: relative;
+
+    &.sample-drag-bar--dragging {
+        background-color: $bg-button-hover-default;
+    }
+
+    .sample-drag-bar__preview {
+        width: 5px;
+        height: 100%;
+        background-color: $border-button-focus-default;
+        position: absolute;
+        top: 0;
+        left: 4px;
+        opacity: 0;
+        transition: opacity 0.2s ease 0.2s;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}
+
+.sample-drag-bar.sample-drag-bar--horizontal {
+    height: 5px;
+    width: 100%;
+    cursor: ns-resize;
+}

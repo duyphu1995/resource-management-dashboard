@@ -1,0 +1,125 @@
+.alert-container {
+    margin-bottom: 16px;
+}
+
+.dialog-import-file-loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    border: 1px dashed #bababa;
+    padding: 16px;
+
+    .dialog-import-file-loading {
+        .dialog-import-file-loading-percent {
+            color: $color-primary;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+        }
+
+        .dialog-import-file-loading-message {
+            color: #767676;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+}
+
+.dialog-import-file {
+    border-radius: 4px;
+    padding: 8px 16px;
+    background: #f8f8f8;
+
+    .dialog-import-file-content {
+        position: relative;
+        flex: 1;
+        padding-right: 24px;
+
+        .dialog-import-file-name {
+            color: $txt-default;
+            font-weight: 500;
+            line-height: 140%;
+        }
+
+        .dialog-import-file-size {
+            margin-top: 4px;
+
+            color: #767676;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+
+        .dialog-import-file-close {
+            position: absolute;
+            top: 2px;
+            right: 0;
+            cursor: pointer;
+            border-radius: 4px;
+
+            &:hover {
+                background: #e4e4e4;
+            }
+        }
+    }
+}
+
+.dialog-import-footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.ant-form-item-file {
+    &:has(.ant-form-item-explain-error) {
+        .ant-upload.ant-upload-drag {
+            border: 1px dashed #ea4343;
+            background: #fdecec;
+        }
+    }
+}
+
+.drop-and-drag-container {
+    .ant-upload-drag-container {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div.ant-upload-drag-icon {
+            margin: unset;
+        }
+        div.ant-upload-text {
+            margin-top: 8px;
+
+            color: $txt-default;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+
+            div:nth-child(2) {
+                margin-top: 6px;
+            }
+        }
+
+        div.ant-upload-hint {
+            margin: 0;
+            margin-top: 16px;
+
+            color: #767676;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+}

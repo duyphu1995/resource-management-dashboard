@@ -1,0 +1,118 @@
+.ant-input {
+    height: 40px;
+
+    border-radius: 4px;
+    border: 1px solid #dfdfdf;
+    padding: 8px 16px;
+    background: #fff;
+
+    color: $txt-default;
+    font-family: $font-family;
+    font-size: $font-size !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    box-shadow: unset;
+
+    &:hover {
+        border-color: $border-color-primary;
+    }
+
+    &:focus {
+        border-color: $border-color-primary;
+        box-shadow: $box-shadow-focus;
+    }
+
+    // Size: Small
+    &.ant-input-sm {
+        height: 32px;
+        padding: 8px 16px;
+    }
+}
+
+// Has addon
+.ant-input-group-wrapper {
+    border-radius: 4px;
+    height: fit-content;
+
+    .ant-input-wrapper {
+        .ant-input-group-addon {
+            background: unset;
+        }
+
+        // Has affix icon
+        .ant-input-affix-wrapper {
+            align-items: center;
+            padding: 0 12px 0 16px;
+            overflow: hidden;
+
+            .ant-input {
+                padding: 0;
+            }
+
+            // Suffix icon
+            .ant-input-suffix {
+                display: flex;
+
+                .ant-input-clear-icon {
+                    top: calc(50% - 2px);
+                    width: 16px;
+                    height: 16px;
+                    background: url('/media/icons/close-gray.svg') no-repeat;
+                    background-size: 100%;
+
+                    * {
+                        display: none;
+                    }
+                }
+            }
+
+            // When suffix icon hidden
+            .ant-input-suffix:has(.ant-input-clear-icon.ant-input-clear-icon-hidden) {
+                display: none;
+            }
+        }
+
+        .ant-input {
+            height: 38px;
+            box-shadow: unset;
+        }
+    }
+
+    &:hover {
+        .ant-input-group-addon {
+            border-color: $border-color-primary;
+        }
+
+        .ant-input-affix-wrapper {
+            border-color: $border-color-primary;
+            box-shadow: unset;
+        }
+
+        .ant-input {
+            border-color: $border-color-primary;
+            box-shadow: unset;
+        }
+    }
+
+    &:has(.ant-input:focus) {
+        box-shadow: $box-shadow-focus;
+
+        .ant-input-group-addon {
+            border-color: $border-color-primary;
+        }
+
+        .ant-input-affix-wrapper {
+            border-color: $border-color-primary;
+            box-shadow: unset;
+        }
+    }
+
+    // Size: Small
+    &.ant-input-group-wrapper-sm {
+        .ant-input {
+            height: 30px;
+        }
+    }
+}

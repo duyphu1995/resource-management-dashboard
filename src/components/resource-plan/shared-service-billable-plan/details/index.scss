@@ -1,0 +1,39 @@
+.shared-service-billable-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.shared-service-container {
+    row-gap: 20px !important;
+    display: flex !important;
+    flex-flow: row wrap !important;
+    flex-direction: column !important;
+    .shared-service-unit {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.shared-service-details {
+    margin-top: 20px;
+    .shared-service-data {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 60px;
+        row-gap: 30px;
+
+        .edit-unit-data {
+            width: 50% !important;
+        }
+
+        .shared-service-unit {
+            min-width: 60px;
+        }
+    }
+}
+
+.active-week {
+    background-color: #d5e8d4;
+}

@@ -1,0 +1,36 @@
+.ant-radio-wrapper {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.ant-radio-wrapper-checked {
+    .ant-radio-inner {
+        background-color: $bg-white !important;
+        border-color: $bg-primary !important;
+
+        &:after {
+            transform: scale(0.6) !important;
+            background-color: $bg-primary;
+        }
+    }
+
+    ::after {
+        border: unset !important;
+    }
+}
+
+.ant-radio-wrapper-disabled {
+    .ant-radio-checked {
+        .ant-radio-inner {
+            border-color: $color-grey-border !important;
+            &:after {
+                background-color: $color-grey-border !important;
+            }
+        }
+    }
+    .ant-radio-checked {
+        ::after {
+            border: unset !important;
+        }
+    }
+}

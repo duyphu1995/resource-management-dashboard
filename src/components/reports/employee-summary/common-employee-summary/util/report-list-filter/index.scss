@@ -1,0 +1,25 @@
+.layout-page-report-window-open {
+    .report-filter-group {
+        .filter-header {
+            align-items: flex-end !important;
+        }
+    }
+}
+
+.table-report-window-open {
+    .ant-spin-container {
+        margin-bottom: 24px;
+    }
+}
+
+.total-effort-table {
+    color: $bg-button-active-primary;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: $bg-white;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 16px;
+}

@@ -1,0 +1,80 @@
+.contract-print {
+    b {
+        font-weight: 600;
+    }
+
+    ul {
+        margin-bottom: 0;
+        padding-left: 8px;
+        list-style-type: none;
+
+        &.no-style {
+            li::before {
+                display: none;
+            }
+        }
+
+        li {
+            position: relative;
+            margin-top: 6px;
+
+            &::before {
+                position: absolute;
+                left: -14px;
+                top: 6px;
+
+                display: block;
+                content: '';
+                background: #3e3e3e;
+
+                width: 8px;
+                height: 1px;
+            }
+
+            ul {
+                li {
+                    &::before {
+                        top: 4px;
+                        border-radius: 50%;
+
+                        width: 4px;
+                        height: 4px;
+                    }
+
+                    ul {
+                        padding-left: 0;
+
+                        li {
+                            &::before {
+                                top: 6px;
+                                border-radius: unset;
+
+                                width: 4px;
+                                height: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contract-terms {
+        margin-top: 16px;
+
+        .contract-terms-item {
+            .contract-terms-item-header {
+                margin-top: 6px;
+                margin-bottom: 6px;
+
+                .contract-terms-item-title {
+                    font-weight: 600;
+                }
+            }
+
+            .contract-terms-item-body {
+                padding: 0 14px;
+            }
+        }
+    }
+}

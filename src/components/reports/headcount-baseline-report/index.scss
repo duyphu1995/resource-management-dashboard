@@ -1,0 +1,58 @@
+.table-dc-dg {
+    .dg-color-bg {
+        background: #33cccc;
+
+        .ant-table-cell {
+            color: #fff;
+        }
+        .ant-table-cell-fix-left,
+        .ant-table-column-sort {
+            background: #33cccc;
+        }
+
+        .ant-table-cell-row-hover {
+            color: #000;
+        }
+    }
+
+    .dg-total-color-bg {
+        background: #ccc;
+
+        .ant-table-cell {
+            color: #000;
+        }
+        .ant-table-cell-fix-left,
+        .ant-table-column-sort {
+            background: #ccc;
+        }
+    }
+
+    .share-service-color-bg,
+    .share-service-by-project-color-bg {
+        background: #eee;
+
+        .ant-table-cell-fix-left,
+        .ant-table-column-sort {
+            background: #eee;
+        }
+    }
+
+    .share-service-by-project-color-bg {
+        .ant-table-cell {
+            color: #000;
+        }
+    }
+
+    .tma-total-color-bg {
+        color: #006666;
+
+        .ant-table-cell {
+            font-weight: 600;
+            color: #006666;
+        }
+
+        .ant-table-cell-row-hover {
+            color: #000;
+        }
+    }
+}

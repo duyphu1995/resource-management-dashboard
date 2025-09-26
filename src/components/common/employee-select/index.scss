@@ -1,0 +1,24 @@
+.employee-select-popup {
+    .ant-select-item-option-content {
+        padding: 10px 16px;
+        .employee-select-item {
+            display: flex;
+            column-gap: 8px;
+            align-items: center;
+        }
+        .employee-select-name-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .employee-select-full-name {
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+            .employee-select-badge-id {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+}

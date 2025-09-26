@@ -1,0 +1,64 @@
+.pie-chart-card {
+    margin: 8px;
+    .pie-chart-card-title {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .ant-divider-horizontal {
+        margin: 16px 0;
+    }
+    .ant-card-head-title {
+        font-size: 16px;
+    }
+    .pie-chart-legend-wrapper {
+        flex: 1;
+        gap: 1rem;
+        padding: 0 40px;
+        .ant-card {
+            flex: 1;
+            min-width: 308px;
+            .ant-card-head {
+                background-color: $bg-gray;
+
+                .ant-card-head-title {
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 19.2px;
+                    text-align: center;
+
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+            .ant-card-body {
+                &:has(.pie-chart-card-content > h3:hover:not(.h3--disable)) {
+                    opacity: 0.75;
+                }
+                .pie-chart-card-content {
+                    h3 {
+                        font-size: 32px;
+                        font-weight: 600;
+                        line-height: 41.6px;
+                        text-align: left;
+                        color: #1e6d98;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: #268cc3;
+                        }
+
+                        &.h3--disable {
+                            color: #767676;
+
+                            &:hover {
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

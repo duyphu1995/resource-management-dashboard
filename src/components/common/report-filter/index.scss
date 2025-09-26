@@ -1,0 +1,14 @@
+.filter-container {
+    .filter-header {
+        align-items: center;
+    }
+
+    .ant-select,
+    .add-more-filter {
+        height: 40px !important;
+    }
+
+    .add-more-filter {
+        margin-left: 10px !important;
+    }
+}

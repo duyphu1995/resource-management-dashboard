@@ -1,0 +1,91 @@
+div.ant-notification {
+    /* Notification item */
+    .ant-notification-notice-wrapper {
+        box-shadow: unset;
+        border: unset;
+        border-radius: unset;
+
+        .ant-notification-notice {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 24px;
+            box-sizing: unset;
+            border: 1px solid $color-gray;
+            border-radius: 4px;
+
+            /* Content */
+            .ant-notification-notice-content {
+                flex: 1;
+
+                /* Content with icon */
+                .ant-notification-notice-with-icon {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    /* Icon */
+                    .ant-notification-notice-icon {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    /* Message */
+                    .ant-notification-notice-message {
+                        flex: 1;
+                        margin: 0;
+                        font-family: $font-family;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                    }
+
+                    /* Description */
+                    .ant-notification-notice-description {
+                        display: none; // Hide description
+                    }
+                }
+            }
+
+            /* Close button */
+            .ant-notification-notice-close {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-right: 0;
+                width: 16px;
+                height: 16px;
+                min-width: 16px;
+                background: url('/media/icons/close-gray.svg') 100% no-repeat;
+
+                .ant-notification-notice-close-x {
+                    display: none;
+                }
+            }
+
+            /* MODE: SUCCESS */
+            &.ant-notification-notice-success {
+                border-color: $border-success;
+                background-color: $bg-success;
+                box-shadow: 1px 4px 4px 0px rgba(82, 183, 37, 0.09);
+
+                .ant-notification-notice-message {
+                    color: $txt-success;
+                }
+            }
+
+            /* MODE: ERROR */
+            &.ant-notification-notice-error {
+                border-color: $border-error;
+                background-color: $bg-error;
+                box-shadow: 1px 4px 4px 0px #b7252517;
+
+                .ant-notification-notice-message {
+                    color: $txt-error;
+                }
+            }
+        }
+    }
+}

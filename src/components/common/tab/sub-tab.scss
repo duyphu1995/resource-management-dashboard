@@ -1,0 +1,47 @@
+.ant-tabs.sub-tab {
+    /* Nav */
+    .ant-tabs-nav {
+        margin-bottom: 24px;
+
+        .ant-tabs-nav-wrap {
+            /* tab nav items */
+            .ant-tabs-nav-list {
+                /* tab nav item */
+                .ant-tabs-tab {
+                    margin-left: 24px;
+                    padding: 8px 0;
+                    font-family: $font-family;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 140%;
+
+                    * {
+                        color: currentColor;
+                    }
+
+                    /* Tab active */
+                    &.ant-tabs-tab-active {
+                        font-weight: 600;
+                        color: $color-primary;
+                    }
+
+                    &:nth-child(1) {
+                        margin-left: 0;
+                    }
+                }
+
+                /* underline */
+                .ant-tabs-ink-bar {
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    /* Content */
+    .ant-tabs-content-holder {
+        .ant-tabs-content {
+            padding: 0;
+        }
+    }
+}

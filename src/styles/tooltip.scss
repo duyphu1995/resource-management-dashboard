@@ -1,0 +1,29 @@
+.ant-tooltip {
+    $bg-color: #323232;
+
+    .ant-tooltip-arrow {
+        &::before {
+            background: $bg-color;
+        }
+
+        &::after {
+            background: $bg-color;
+        }
+    }
+
+    .ant-tooltip-content {
+        background: $bg-color;
+        padding: 8px;
+        border-radius: 6px;
+
+        .ant-tooltip-inner {
+            padding: 0;
+            background: transparent;
+            box-shadow: unset;
+
+            min-height: fit-content;
+            max-height: 200px;
+            overflow: auto;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.page-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+}
+
+.configuration-box-container {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+
+    .box-content-title-header {
+        margin-bottom: 0px !important;
+    }
+
+    .ant-row.ant-form-item-row {
+        flex-flow: row nowrap !important;
+    }
+
+    .ant-col.ant-form-item-label {
+        width: 180px !important;
+    }
+
+    .ant-col.ant-form-item-control {
+        padding-left: 30px !important;
+    }
+
+    .box-content-container {
+        .box-form-group {
+            .ant-col-6 {
+                min-width: 433px;
+            }
+        }
+    }
+}

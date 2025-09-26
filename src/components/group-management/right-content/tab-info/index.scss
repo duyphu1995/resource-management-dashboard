@@ -1,0 +1,42 @@
+.tab-info-chart__container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .tab-info__box {
+        position: relative;
+        width: 100%;
+        border: 1px solid $border-color-grey;
+        border-radius: 4px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .tab-info__box--title {
+            font-size: 14px;
+            font-weight: 500;
+            color: $color-grey-border;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 24px;
+                background-color: #2a9ad6;
+                left: 0;
+            }
+        }
+
+        .pa-tool-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .tab-info-row-item {
+            .ant-form-item-row {
+                display: block !important;
+            }
+        }
+    }
+}

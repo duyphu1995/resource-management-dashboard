@@ -1,0 +1,83 @@
+.pa-support {
+    padding: 24px;
+    background: #fff;
+
+    &__header {
+        .header {
+            &__title {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 140%;
+                color: #323232;
+            }
+
+            &__group-btn {
+                display: flex;
+                justify-content: flex-end;
+                gap: 16px;
+
+                .group-btn__update {
+                    background: rgb(0, 168, 17);
+                    border-color: rgb(0, 168, 17);
+
+                    &:hover {
+                        background-color: rgb(0 137 14) !important;
+                        border-color: rgb(0 137 14) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &__table {
+        .table__description {
+            display: flex;
+            align-items: center;
+            gap: 148px;
+            margin-bottom: 18px;
+
+            h4 {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 140%;
+                color: #323232;
+
+                margin-bottom: 0;
+            }
+
+            ul {
+                list-style-type: none;
+                margin-bottom: 0;
+
+                display: flex;
+                align-items: center;
+                gap: 36px;
+
+                li {
+                    position: relative;
+                    padding-left: 36px;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 24px;
+                        height: 14px;
+                        border-radius: 2px;
+                        background-color: #88592b;
+                    }
+
+                    &:first-child::before {
+                        background-color: #0719ed;
+                    }
+
+                    &:last-child::before {
+                        background-color: #00a811;
+                    }
+                }
+            }
+        }
+    }
+}

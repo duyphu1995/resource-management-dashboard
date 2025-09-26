@@ -1,0 +1,49 @@
+.show-column-dialog {
+    .ant-modal-content {
+        display: flex;
+        flex-direction: column;
+        min-height: 677px;
+        padding: 24px;
+
+        .ant-modal-header {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid $border-color-grey;
+
+            .ant-modal-title {
+                text-align: center;
+            }
+        }
+
+        .ant-modal-body {
+            flex: 1;
+        }
+
+        .ant-modal-footer {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid $border-color-grey;
+        }
+    }
+
+    /* Footer button */
+    .button-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: -1px;
+
+        .dialog-btn-ft-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .button-flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

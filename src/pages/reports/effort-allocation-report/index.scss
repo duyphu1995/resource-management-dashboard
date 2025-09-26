@@ -1,0 +1,116 @@
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #333;
+}
+
+.generate-employee-list-report {
+    margin-top: 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .box-form-title {
+        padding: 0 24px !important;
+    }
+}
+
+.employee-effort-allocation-report {
+    margin-top: 20px;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 8px;
+
+        .export-btn {
+            margin-top: -6px !important;
+        }
+    }
+}
+
+.employee-list-report-form {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 24px;
+
+    &__controller {
+        display: flex;
+        gap: 68px;
+
+        .ant-form-item-row {
+            gap: 16px;
+
+            .ant-form-item-label {
+                width: fit-content !important;
+            }
+
+            .ant-form-item-control {
+                width: 240px !important;
+                flex: none;
+            }
+        }
+    }
+}
+
+.effort-tab {
+    &__container {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin-bottom: 24px;
+
+        .filter-table {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 25px;
+            width: 25%;
+            align-items: center;
+
+            &__title {
+                min-width: fit-content;
+            }
+
+            &__select {
+                width: 100%;
+            }
+        }
+
+        .total-contractor {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 16px;
+            align-items: center;
+
+            .contractor-color {
+                border: 1px solid grey;
+                float: left;
+                width: 20px;
+                height: 15px;
+                background-color: #feff99;
+            }
+        }
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+    .contractor-row {
+        background-color: #feff99;
+
+        td {
+            background-color: transparent;
+        }
+    }
+
+    .ant-table-container {
+        .ant-table-header {
+            .ant-table-cell {
+                border-inline-end: none !important;
+                text-align: center;
+            }
+        }
+    }
+}

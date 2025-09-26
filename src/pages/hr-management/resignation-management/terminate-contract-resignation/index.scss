@@ -1,0 +1,22 @@
+.resignation-print {
+    b {
+        font-weight: 600;
+    }
+
+    .resignation-terms {
+        .resignation-terms-item {
+            .resignation-terms-item-header {
+                margin-top: 6px;
+                margin-bottom: 6px;
+
+                .resignation-terms-item-title {
+                    font-weight: 600;
+                }
+            }
+
+            .resignation-terms-item-body {
+                padding: 0 14px;
+            }
+        }
+    }
+}

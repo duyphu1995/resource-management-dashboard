@@ -1,0 +1,47 @@
+.staff-grade-summary {
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+
+        .info__sub-title {
+            font-size: 18px;
+        }
+
+        .info__generated-date {
+            color: $color-black;
+            font-family: $font-family;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 600;
+        }
+    }
+
+    &__table {
+        .ant-table-header {
+            .ant-table-cell {
+                text-align: center;
+                color: #00a1e9 !important;
+            }
+        }
+
+        .table-row-dg {
+            background-color: #3cc !important;
+
+            td {
+                color: #ffffff !important;
+                background-color: #3cc !important;
+            }
+        }
+
+        .table-row-total {
+            background-color: #eaeaea !important;
+
+            td {
+                background-color: #eaeaea !important;
+                font-weight: 500 !important;
+            }
+        }
+    }
+}

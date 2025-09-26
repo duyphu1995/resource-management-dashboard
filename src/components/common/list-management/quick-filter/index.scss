@@ -1,0 +1,107 @@
+.quick-filter {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .quick-filter-header {
+        margin-bottom: 16px;
+
+        &-title {
+            color: $txt-default;
+            font-family: $font-family;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 120%;
+        }
+    }
+
+    .quick-filter-body {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        overflow: auto;
+        height: 100%;
+        flex: 1;
+
+        .quick-filter-item {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4px;
+
+            border-radius: 4px;
+            border: 1px solid $border-color-grey;
+            padding: 0;
+
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            .quick-filter-item-content {
+                color: $txt-default;
+                font-family: $font-family;
+                font-size: $font-size;
+                font-weight: 400;
+                line-height: 140%;
+                text-align: left;
+
+                background: unset;
+                padding: 10px 32px 10px 8px;
+
+                width: 100%;
+                height: unset;
+            }
+
+            .quick-filter-item-button {
+                position: absolute;
+                right: 8px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 4px;
+                width: 20px;
+                height: 20px;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                &:hover,
+                &.ant-dropdown-open {
+                    background: $bg-primary-light;
+
+                    svg path {
+                        fill: $bg-primary;
+                    }
+                }
+
+                .ant-dropdown-menu-item-active {
+                    background: $bg-primary-light;
+                }
+            }
+
+            &:hover {
+                background: $bg-primary-light-hover;
+            }
+
+            &.is-active {
+                background: $bg-primary-light-hover;
+                border-color: $border-color-primary;
+
+                .quick-filter-item-content {
+                    color: $color-primary;
+                    font-weight: 500;
+                }
+
+                .quick-filter-item-button {
+                    svg path {
+                        fill: $bg-primary;
+                    }
+                }
+            }
+        }
+    }
+}

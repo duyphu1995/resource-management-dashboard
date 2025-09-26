@@ -1,0 +1,19 @@
+.detail-shared-service-by-shared-service {
+    .shared-service-row {
+        background-color: #dae8fc;
+
+        td {
+            color: #00a1e5 !important;
+            font-weight: 600 !important;
+
+            &:first-child {
+                text-align: left !important;
+            }
+
+            &:first-child,
+            &:nth-child(2) {
+                border-inline-end: unset !important;
+            }
+        }
+    }
+}

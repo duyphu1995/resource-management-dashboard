@@ -1,0 +1,72 @@
+.employee-data-for-finance {
+    .search-input {
+        margin-bottom: 20px;
+    }
+
+    &__note {
+        display: flex;
+        gap: 50px;
+        flex-flow: row wrap;
+        margin-left: 12px;
+
+        span:last-child {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 12px;
+                height: 12px;
+                background-color: $color-red;
+            }
+        }
+    }
+
+    &__table {
+        margin-top: 12px;
+        padding: 12px;
+        border: 1px solid #f0f0f0;
+
+        .ant-table-column-sorters {
+            justify-content: center !important;
+        }
+
+        .table-row-resigned {
+            td {
+                color: $color-red !important;
+            }
+        }
+
+        .ant-table-cell {
+            width: 200px;
+            max-width: 200px;
+
+            &:first-child {
+                width: 70px;
+                max-width: 70px;
+            }
+        }
+    }
+
+    .filter-header {
+        .report-filter__title {
+            display: flex;
+            flex-direction: column;
+
+            & > h3 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 140%;
+                color: #333;
+            }
+
+            &__search {
+                width: 400px;
+            }
+        }
+
+        align-items: flex-end;
+    }
+}

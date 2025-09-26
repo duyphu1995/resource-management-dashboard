@@ -1,0 +1,12 @@
+.table-experience-detail {
+    .ant-table-thead {
+        .ant-table-cell {
+            text-align: center;
+            color: #00a1e9 !important;
+
+            &.grade-header:not(:last-child) {
+                border-inline-end: none !important;
+            }
+        }
+    }
+}

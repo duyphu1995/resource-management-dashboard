@@ -1,0 +1,43 @@
+.monthly-delivery {
+    .ant-breadcrumb.breadcrumb {
+        margin-bottom: 12px;
+    }
+
+    main > .ant-tabs.sub-tab {
+        margin-top: 24px;
+    }
+
+    .ant-tabs.sub-tab .ant-tabs-nav {
+        margin-bottom: 32px;
+    }
+
+    .danger {
+        color: #ea4343;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    h5.title,
+    h6.title {
+        color: #323232;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+
+        margin-bottom: 16px;
+    }
+
+    h6.title {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .ant-table-column-title {
+        user-select: none;
+    }
+}
