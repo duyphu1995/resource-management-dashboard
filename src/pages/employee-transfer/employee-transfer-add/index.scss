@@ -1,0 +1,165 @@
+.employee-transfer-add {
+    .table-transfer-mailing-list {
+        margin-top: 32px;
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 16px;
+        }
+
+        .column {
+            visibility: visible;
+            opacity: 1;
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+        .button-column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .transfer-container {
+            height: 100%;
+
+            .transfer-box-one,
+            .transfer-box-two {
+                width: 72px;
+                height: 40px;
+                border: 1px solid $border-color-grey;
+
+                .transfer-icon {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            .transfer-right-dis-one,
+            .transfer-left-dis-one,
+            .transfer-right-dis-two,
+            .transfer-left-dis-two {
+                cursor: no-drop;
+                background-color: $bg-white;
+            }
+
+            .transfer-right-selected-one,
+            .transfer-left-selected-one,
+            .transfer-right-selected-two,
+            .transfer-left-selected-two {
+                background-color: $color-primary;
+                cursor: pointer;
+                img {
+                    filter: contrast(100);
+                }
+            }
+
+            .transfer-box {
+                background-color: $bg-white;
+                &:hover {
+                    background-color: $color-primary;
+                    cursor: pointer;
+                    img {
+                        filter: contrast(100);
+                    }
+                }
+            }
+        }
+    }
+
+    .col-admin-ticket {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .admin-ticket-title {
+            font-weight: 600;
+        }
+        .title {
+            font-weight: 500;
+        }
+    }
+
+    .select-mail {
+        height: 100%;
+        border-bottom: 20px;
+        .ant-select {
+            height: unset !important;
+        }
+        .ant-select-selector,
+        .ant-select-clear,
+        .ant-select-arrow {
+            display: none !important;
+        }
+
+        .ant-select-dropdown {
+            width: 100%;
+            height: 270px;
+
+            border: unset;
+            position: unset;
+
+            padding: 12px;
+
+            .select-search {
+                display: none;
+            }
+        }
+
+        .ant-select-dropdown .rc-virtual-list-holder-inner .ant-select-item.ant-select-item-option-active .ant-select-item-option-content {
+            background-color: unset !important;
+            // background: #f8f8f8 !important;
+        }
+        .ant-select-dropdown .rc-virtual-list-holder-inner .ant-select-item.ant-select-item-option-selected .ant-select-item-option-content {
+            background: #eaf5fb !important;
+        }
+    }
+
+    .transfer-to {
+        margin-top: 32px;
+
+        &__title {
+            margin-bottom: 12px;
+        }
+
+        .keep-hdd-reason {
+            color: #323232;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 140%;
+
+            margin-bottom: 4px;
+        }
+
+        .keep-hdd-reason-value {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .approval-title {
+        color: #323232;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 140%;
+
+        margin-bottom: 4px;
+    }
+
+    .ant-form-item-label {
+        padding-bottom: 4px !important;
+    }
+
+    &.employee-transfer__detail {
+        .ant-form-item-control,
+        .ant-form-item-control-input {
+            min-height: unset !important;
+        }
+
+        .pt-10 {
+            padding-top: 10px;
+        }
+    }
+}

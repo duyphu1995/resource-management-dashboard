@@ -1,0 +1,159 @@
+.headcount-report {
+    &__title {
+        margin-bottom: 24px;
+        color: rgba(0, 0, 0, 0.88);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.3333333333333333;
+    }
+
+    .headcount-common {
+        .table-row-BU {
+            background-color: #cce5ff !important;
+
+            td {
+                background-color: #cce5ff;
+                font-weight: 600 !important;
+
+                &:not(:first-child) {
+                    border-inline-end: none !important;
+                }
+            }
+        }
+
+        .table-row-shared-service-unit {
+            background-color: #eeeeee !important;
+
+            td {
+                background-color: #eeeeee !important;
+                font-weight: 500 !important;
+
+                &:not(:first-child) {
+                    border-inline-end: none !important;
+                }
+            }
+        }
+
+        .table-row-total {
+            .ant-table-cell {
+                background-color: #dfdfdf;
+                font-weight: 500;
+            }
+
+            td {
+                font-weight: 600 !important;
+
+                &:not(:first-child) {
+                    border-inline-end: none !important;
+                }
+            }
+        }
+
+        .table-row-total-effort {
+            td {
+                &:first-child {
+                    font-weight: 600 !important;
+                    color: #003366 !important;
+                }
+
+                &:not(:first-child) {
+                    border-inline-end: none !important;
+                }
+            }
+        }
+
+        &__time {
+            font-weight: 500;
+        }
+    }
+
+    .headcount-details {
+        .table-row-shared-service-unit {
+            background-color: #dfdfdf;
+
+            td {
+                background-color: #dfdfdf;
+                border-inline-end: none !important;
+                font-weight: 600 !important;
+
+                &:last-child,
+                &:nth-last-child(2) {
+                    background-color: #fff !important;
+                }
+            }
+        }
+
+        .table-row-dg {
+            td {
+                font-weight: 600 !important;
+            }
+        }
+    }
+
+    .shared-service-summary {
+        &__business-unit {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 24px;
+
+            .ant-form-item-row {
+                .ant-form-item-label {
+                    width: fit-content;
+                }
+
+                .ant-form-item-control {
+                    width: 367px;
+                }
+            }
+        }
+
+        &__total-row {
+            background-color: #f9f7ed;
+
+            td {
+                font-weight: 600 !important;
+                border-inline-end: none !important;
+                background-color: #f9f7ed;
+            }
+        }
+    }
+
+    .shared-service-details {
+        &__business-unit {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 24px;
+
+            .ant-form-item-row {
+                .ant-form-item-label {
+                    width: fit-content;
+                }
+
+                .ant-form-item-control {
+                    width: 367px;
+                }
+            }
+        }
+
+        .column-group-header {
+            background-color: #d5e8d4;
+
+            td {
+                font-weight: 600 !important;
+                border-inline-end: none !important;
+            }
+        }
+
+        .column-shared-service {
+            background-color: #eeeeee;
+
+            td {
+                border-inline-end: none !important;
+            }
+        }
+    }
+
+    .ant-table-thead .ant-table-cell {
+        text-align: center;
+    }
+}

@@ -1,0 +1,79 @@
+ul.ant-pagination {
+    align-items: center;
+    height: fit-content;
+    margin-bottom: unset !important;
+
+    .ant-pagination-total-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-right: auto;
+        line-height: normal;
+        height: unset;
+        color: $text-disabled;
+
+        .ant-select {
+            .ant-select-selector {
+                padding: 0 36px 0 12px !important;
+
+                .ant-select-selection-item {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .ant-pagination-prev,
+    .ant-pagination-next,
+    .ant-pagination-item {
+        position: relative;
+        min-width: 24px;
+        height: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        margin-right: 2px;
+
+        button,
+        a,
+        .ant-pagination-item-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $text-disabled;
+        }
+
+        &.ant-pagination-item-active {
+            background: $bg-primary-light;
+            border: $bg-primary-light;
+
+            a {
+                color: $color-primary !important;
+            }
+        }
+    }
+
+    .ant-pagination-jump-next,
+    .ant-pagination-jump-prev {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2px;
+
+        .ant-pagination-item-link {
+            line-height: normal;
+            width: 100%;
+        }
+    }
+
+    .ant-pagination-next {
+        margin-right: 0;
+    }
+}

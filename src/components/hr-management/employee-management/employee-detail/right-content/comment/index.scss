@@ -1,0 +1,81 @@
+.comments {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 4px;
+
+    &__item {
+        margin-bottom: 24px;
+
+        &-header {
+            @include flex-box--default(center, space-between);
+            margin-bottom: 8px;
+
+            .btn-more {
+                padding: 0;
+            }
+        }
+
+        &__content {
+            color: $txt-default;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 140%;
+        }
+    }
+
+    &__info-user {
+        @include flex-box--default(center);
+
+        &--name {
+            color: $txt-default;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 24px;
+        }
+
+        &--time {
+            color: #767676;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    .form-add {
+        @include flex-box--default(flex-end, flex-start, column nowrap);
+
+        &__body {
+            @include flex-box--default(center);
+            margin-bottom: 8px;
+            width: 100%;
+        }
+        &__input {
+            margin-bottom: 0;
+            width: 100%;
+
+            input {
+                height: 40px;
+            }
+        }
+
+        .btn-submit {
+            height: 32px;
+            width: unset;
+            min-width: 110px;
+
+            font-weight: 600;
+            line-height: 140%;
+
+            &:disabled {
+                background-color: #d5d5d5;
+                color: #767676;
+            }
+        }
+    }
+
+    .image {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 16px;
+    }
+}

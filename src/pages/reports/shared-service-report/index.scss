@@ -1,0 +1,28 @@
+.shared-service-report {
+    &__filter {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+
+        .ant-form-item-label {
+            width: fit-content !important;
+        }
+
+        .ant-form-item-control {
+            width: 200px !important;
+            flex: none;
+        }
+    }
+
+    &__table {
+        margin-top: 24px;
+
+        .ant-table-container {
+            .ant-table-thead {
+                .ant-table-cell {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

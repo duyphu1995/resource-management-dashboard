@@ -1,0 +1,142 @@
+$height-field: 40px;
+
+.ant-modal {
+    .ant-modal-content {
+        .ant-modal-header {
+            .ant-modal-title {
+                text-align: center;
+                color: $txt-default;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+            }
+        }
+    }
+}
+
+.dialog-information {
+    width: 1268px !important;
+
+    .ant-form-item {
+        width: 100%;
+    }
+
+    &__container {
+        margin-bottom: 24px;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    &__item {
+        flex: 0 0 calc(25% - 18px);
+        max-width: calc(25% - 18px);
+        margin-bottom: 0;
+
+        &.total-columns-2 {
+            flex: 0 0 calc(50% - 24px);
+            max-width: calc(50% - 24px);
+        }
+    }
+
+    &__label {
+        @include txt-styles(14px, 500, $txt-default);
+        margin-bottom: 4px;
+
+        .required {
+            @include txt-styles(14px, 400, $color-red);
+        }
+    }
+
+    &__input {
+        height: $height-field;
+        @include txt-styles();
+        @include flex-box--default(center);
+    }
+
+    &__documents {
+        width: 100%;
+
+        .documents {
+            &__label {
+                @include txt-styles(14px, 600, $txt-default);
+
+                width: 100%;
+                margin-bottom: 12px;
+            }
+
+            &__container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px 24px;
+            }
+
+            &-ckb {
+                flex: 0 0 calc(25% - 18px);
+                max-width: calc(25% - 18px);
+                margin-bottom: 0;
+
+                span:last-child {
+                    @include txt-styles(14px, 400, $txt-default);
+                }
+            }
+        }
+    }
+
+    .ant-picker {
+        height: $height-field;
+        width: 100%;
+    }
+
+    .ant-input {
+        height: $height-field;
+        line-height: 3;
+    }
+
+    .ant-form-item-row {
+        display: block;
+
+        .ant-form-item-required {
+            &::after {
+                content: unset;
+            }
+        }
+
+        .ant-form-item-label {
+            text-align: start;
+
+            label {
+                height: unset;
+
+                &::after {
+                    content: unset;
+                }
+            }
+        }
+    }
+
+    .ant-select-selector {
+        height: $height-field !important;
+
+        @include flex-box--default(center);
+    }
+
+    .btn-comment {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        height: 40px;
+
+        span {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2a9ad6;
+        }
+    }
+
+    .ant-modal-title {
+        text-align: center;
+    }
+}

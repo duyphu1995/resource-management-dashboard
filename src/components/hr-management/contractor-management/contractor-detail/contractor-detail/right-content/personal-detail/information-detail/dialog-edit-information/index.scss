@@ -1,0 +1,27 @@
+.ant-form-item-has-error {
+    .ant-input-disabled {
+        border-color: $color-red;
+
+        &:hover {
+            border-color: #ffa39e;
+        }
+    }
+}
+
+.header-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 140%;
+    }
+
+    &__button {
+        display: flex;
+        gap: 12px;
+    }
+}

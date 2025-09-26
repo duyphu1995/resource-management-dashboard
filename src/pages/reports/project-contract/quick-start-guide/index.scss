@@ -1,0 +1,75 @@
+.quick-start-guide {
+    height: 100vh;
+    position: relative;
+
+    &__header {
+        box-shadow: 0px 1px 4px 0px rgba(51, 51, 51, 0.05);
+        padding: 16px 24px;
+        background: white;
+        height: 64px;
+
+        display: flex;
+        align-items: center;
+
+        .header__logo {
+            color: #2a9ad6;
+            font-family: $font-family;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 120%;
+            text-decoration: none;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    &__body {
+        padding: 24px;
+
+        & > h1 {
+            color: rgb(28, 24, 182);
+            font-weight: 700;
+        }
+
+        .project-info {
+            color: rgb(0, 161, 229);
+
+            & ul {
+                color: #030303;
+
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .download-btn {
+                    border: none;
+                    background: transparent;
+                    text-decoration: underline;
+                    padding: 0;
+                    margin-left: 8px;
+
+                    cursor: pointer;
+                    transition: opacity 0.2s ease-in-out;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+    &__footer {
+        font-size: 13px;
+        color: #fff;
+        background: #00a1e4;
+        text-align: center;
+        padding: 16px;
+
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+}

@@ -1,0 +1,101 @@
+$body-min-width: 1366px;
+$font-family: Inter;
+$font-size: 14px;
+
+$color-white: #ffffff;
+$color-black: #333;
+$color-gray: #f8f8f8;
+$color-primary: #2a9ad6;
+$color-grey: #848484;
+$color-grey-light: #d5d5d5;
+$color-grey-border: #767676;
+$color-red: #ea4343;
+$body-min-width: 1366px;
+$color-whisper: #f1f1f1;
+
+$bg-primary: #2a9ad6;
+$bg-primary-light: #eaf5fb;
+$bg-primary-light-hover: #eaf5fb90;
+$bg-primary-light-active: #d6ecf8;
+$bg-black: #333;
+$bg-white: #fff;
+$bg-gray: #f8f8f8;
+$bg-gray-light: #dfdfdf;
+
+$txt-default: #323232;
+$txt-success: #00a811;
+$txt-error: #ea4343;
+$bg-success: #e6f6e7;
+$bg-error: #fdecec;
+$border-success: #8ad792;
+$border-error: #f5a9a9;
+
+$box-shadow-focus: 0px 0px 0px 2px #eaf5fb;
+
+/*-----Dropdown-----*/
+$bg-dropdown-selected: #eaf5fb;
+$bg-dropdown-hover: #f8f8f8;
+$bg-dropdown-active: #eaeaea;
+$bg-dropdown-selected-active: #eaeaea;
+/*-----Dropdown-----*/
+
+/*-----Button color primary-----*/
+$bg-button-primary: #2a9ad6;
+$bg-button-hover-primary: #268cc3;
+$border-button-hover-primary: #268cc3;
+$bg-button-active-primary: #1e6d98;
+$bg-button-focus-primary: #2a9ad6;
+$bg-button-focus-primary: #2a9ad6;
+$outline-button-focus-primary: #9dd1ec;
+
+/*-----Button color default-----*/
+$border-button-default: #2a9ad6;
+$bg-button-hover-default: #eaf5fb;
+$text-button-hover-default: #268cc3;
+$border-button-hover-default: #268cc3;
+$bg-button-active-default: #eaf5fb;
+$text-button-active-default: #1e6d98;
+$border-button-active-default: #1e6d98;
+$border-button-focus-default: #2a9ad6;
+$outline-button-focus-default: #9dd1ec;
+
+/*-----Button color danger-----*/
+$text-button-danger: #ea4343;
+$border-button-danger: #ea4343;
+$bg-button-hover-danger: #fdecec;
+$border-button-hover-danger: #d53d3d;
+$text-button-hover-danger: #d53d3d;
+$bg-button-active-danger: #fdecec;
+$border-button-active-danger: #a63030;
+$text-button-active-danger: #a63030;
+$border-button-focus-danger: #e9262a;
+$outline-button-focus-danger: #f8bcbd;
+$text-button-focus-danger: #e9262a;
+
+/*-----Button color link-----*/
+$bg-button-link: transparent;
+$text-button-link: #2a9ad6;
+$border-button-link: transparent;
+
+$bg-button-hover-link: #eaeaea;
+$border-button-hover-link: #eaeaea;
+$text-button-hover-link: #2a9ad6;
+
+$bg-button-active-link: #dfdfdf;
+$border-button-active-link: #dfdfdf;
+$text-button-active-link: #2a9ad6;
+
+$border-button-focus-link: #eaf5fb;
+$bg-button-focus-link: #eaf5fb;
+$text-button-focus-link: #2a9ad6;
+$outline-button-focus-link: unset;
+
+/*-----Button color disable-----*/
+$bg-disabled: #d5d5d5;
+$text-disabled: #767676;
+
+$border-color-grey: #dfdfdf;
+$border-color-primary: #2a9ad6;
+
+//table
+$color-row-table: #f8f8f8;

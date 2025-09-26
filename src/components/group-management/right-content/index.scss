@@ -1,0 +1,40 @@
+.form-add-node-org,
+.form-request-to-delete {
+    .ant-form-item {
+        .ant-form-item-label {
+            width: auto;
+        }
+    }
+
+    .form-item-node-org {
+        margin: 12px 0;
+
+        .ant-form-item-row {
+            gap: 10px;
+
+            .ant-form-item-label {
+                width: 77px;
+            }
+        }
+    }
+
+    .form-action-node-org {
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+.required {
+    color: $color-red;
+}
+
+.text-area-item {
+    max-height: 250px;
+    line-height: 1.5 !important;
+}
+
+.sub-tab-org-chart {
+    .ant-tabs-content {
+        padding: 0;
+    }
+}

@@ -1,0 +1,58 @@
+.resource-projection-configuration-table {
+    margin-top: 24px;
+
+    .ant-table-container {
+        .ant-table-header {
+            .ant-table-thead {
+                .config-row-index {
+                    .ant-table-cell {
+                        background-color: #bde0f2;
+                        text-align: center;
+                        border-inline-end: 1px solid $color-white !important;
+                        &:nth-last-child(2) {
+                            border-bottom: 1px solid $color-white !important;
+                        }
+                    }
+                    .config-table-header-column {
+                        border-top: unset !important;
+                        border-bottom: 0.1px solid $color-white !important;
+                        border-inline-end: 0.1px solid $color-white !important;
+                    }
+                    .ant-table-cell-scrollbar {
+                        border-inline-end: 1px solid $color-white;
+                    }
+                    &:nth-child(2) {
+                        .ant-table-cell {
+                            border-top: unset !important;
+                            border-left: unset !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ant-table-body {
+            .ant-table-tbody {
+                .group-department-row {
+                    .ant-table-cell {
+                        background-color: $outline-button-focus-primary;
+                    }
+                }
+                .highest-root-unit {
+                    .ant-table-cell {
+                        background-color: $color-primary;
+                        color: $color-white;
+                    }
+                }
+                .ant-table-cell-row-hover {
+                    color: $color-black !important;
+                }
+            }
+        }
+    }
+}
+
+.btn-edit-config-table {
+    float: right;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,9 @@
+.ant-form-item-has-error {
+    .ant-input-disabled {
+        border-color: $color-red;
+
+        &:hover {
+            border-color: #ffa39e;
+        }
+    }
+}

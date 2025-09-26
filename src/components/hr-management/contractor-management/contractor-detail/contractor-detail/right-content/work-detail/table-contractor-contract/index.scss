@@ -1,0 +1,20 @@
+.dialog-contractor-contract {
+    padding: 24px;
+
+    .footer-contractor-contract {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .center-item {
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    .ant-modal-content {
+        padding: 24px;
+    }
+}

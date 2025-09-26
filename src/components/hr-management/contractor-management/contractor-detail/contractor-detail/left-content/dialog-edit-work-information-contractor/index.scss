@@ -1,0 +1,11 @@
+.location-contractor {
+    width: calc(50% - 12px) !important;
+
+    .location__container {
+        width: 100% !important;
+    }
+
+    .location-contractor__form {
+        width: calc(100% / 3) !important;
+    }
+}

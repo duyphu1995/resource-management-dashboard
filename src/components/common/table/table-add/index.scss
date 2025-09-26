@@ -1,0 +1,10 @@
+.table-container {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,55 @@
+.list-document-management {
+    .ant-table-selection-col {
+        width: 52px !important;
+    }
+
+    .ant-table-tbody {
+        .table-document-padding-0 {
+            padding: 0 !important;
+        }
+        .table-document-tr {
+            .table-document-td {
+                height: 40px;
+                border-bottom: 1px solid #e8e8e8;
+                padding: 0 16px;
+                transition:
+                    background 0.2s,
+                    border-color 0.2s;
+
+                &__notes {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 200px;
+                }
+            }
+            &:last-child {
+                .table-document-td {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .ant-table-cell-row-hover {
+            .table-document-td {
+                background: transparent !important;
+            }
+        }
+        .highlight-checked {
+            .ant-table-cell {
+                background: #e6f4ff !important;
+            }
+            .table-document-td {
+                background: transparent !important;
+            }
+        }
+
+        .highlight-checked:hover .ant-table-cell {
+            background: #bae0ff !important;
+        }
+    }
+
+    .isCompleted {
+        text-align: center;
+    }
+}

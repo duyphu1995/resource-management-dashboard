@@ -1,0 +1,310 @@
+.disHidden {
+    display: none !important;
+}
+
+.button-action-org-chart {
+    position: absolute;
+    display: flex;
+    z-index: 99;
+    gap: 10px;
+    top: -25px;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .button-size-org {
+        min-width: unset !important;
+        height: 20px !important;
+    }
+}
+
+.button-add,
+.button-edit,
+.button-delete {
+    background: rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.org-chart {
+    ul {
+        padding-left: 0;
+        text-align: center;
+        display: flex;
+        margin: 0;
+        transition: all 0.3s;
+        justify-content: center;
+
+        li {
+            display: inline-block;
+            position: relative;
+
+            .oc-node {
+                box-sizing: border-box;
+                display: inline-block;
+                position: relative;
+                padding: 3px 12px;
+                border: 2px dashed transparent;
+                margin-bottom: 40px;
+                cursor: pointer;
+
+                /* excluding leaf node */
+                &:not(:only-child)::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -22px;
+                    left: calc(50% - 1px);
+                    width: 2px;
+                    height: 26px;
+                    background-color: $border-color-grey;
+                }
+
+                .oc-heading {
+                    box-sizing: border-box;
+                    margin: 32px 8px 4px 8px;
+                    width: auto;
+                    height: 20px;
+                    line-height: 140%;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: $color-primary;
+                    font-weight: 500;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+
+                .oc-content {
+                    box-sizing: border-box;
+                    width: auto;
+                    height: 20px;
+                    font-size: 12px;
+                    text-align: center;
+                    color: $color-grey-border;
+                    font-weight: 400;
+                    margin-bottom: 12px;
+                }
+
+                .oc-tag {
+                    width: auto;
+                    height: 20px;
+                }
+
+                .oc-team {
+                    text-align: center;
+                    margin: 0 8px 16px 8px;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+
+                /* styles for edges */
+                .oc-edge {
+                    position: absolute;
+                    cursor: default;
+                    transition: 0.2s;
+
+                    &::before {
+                        border-color: rgba(68, 157, 68, 0.5);
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .verticalEdge {
+                    width: calc(100% - 6px);
+                    width: -webkit-calc(100% - 6px);
+                    width: -moz-calc(100% - 6px);
+                    height: 10px;
+                    left: 3px;
+
+                    &::before {
+                        position: absolute;
+                        left: calc(50% - 0.3125rem);
+                    }
+                }
+
+                .topEdge {
+                    top: -2px;
+
+                    &.oci-chevron-up::before {
+                        top: 2px;
+                    }
+
+                    &.oci-chevron-down::before {
+                        bottom: 3px;
+                    }
+                }
+
+                .bottomEdge {
+                    bottom: -2px;
+
+                    &.oci-chevron-up::before {
+                        top: 3px;
+                    }
+
+                    &.oci-chevron-down::before {
+                        bottom: 1px;
+                    }
+                }
+
+                .horizontalEdge {
+                    width: 10px;
+                    height: calc(100% - 6px);
+                    height: -webkit-calc(100% - 6px);
+                    height: -moz-calc(100% - 6px);
+                    top: 3px;
+
+                    &::before {
+                        position: absolute;
+                        top: calc(50% - 0.3125rem);
+                    }
+                }
+
+                &.isChildrenCollapsed:not(:only-child)::after {
+                    content: none;
+                }
+
+                &.allowedDrop {
+                    border-color: rgba(68, 157, 68, 0.9);
+                }
+            }
+
+            ul {
+                li.isAncestorsCollapsed {
+                    .oc-node::before {
+                        content: none;
+                    }
+                }
+
+                li.isSiblingsCollapsed {
+                    &::before {
+                        content: none;
+                    }
+
+                    .oc-node::before {
+                        top: -13px;
+                        height: 11px;
+                    }
+                }
+
+                /* excluding root node */
+                li {
+                    /* excluding root node */
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -22px;
+                        left: 0;
+                        width: 100%;
+                        border-top: 2px solid $border-color-grey;
+                        box-sizing: border-box;
+                    }
+
+                    .oc-node::before {
+                        content: '';
+                        position: absolute;
+                        top: -22px;
+                        left: calc(50% - 1px);
+                        width: 2px;
+                        height: 30px;
+                        background-color: $border-color-grey;
+                    }
+
+                    &:first-child::before {
+                        left: calc(50% - 1px);
+                        width: calc(50% + 1px);
+                    }
+
+                    &:last-child::before {
+                        width: calc(50% + 1px);
+                    }
+
+                    &:only-child::before {
+                        width: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .oc-edge:hover::before {
+        border-color: #449d44;
+    }
+
+    &.noncollapsable {
+        .oc-node {
+            .oc-edge {
+                display: none;
+            }
+        }
+    }
+}
+
+.oc-image {
+    .oc-image-node {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.oc-card {
+    min-width: 160px;
+    min-height: 120px;
+    width: auto;
+    background-color: #fff;
+    margin-top: -20px;
+    border: 1px solid $border-color-grey;
+    border-radius: 8px;
+}
+
+.org-chart ul li .oc-node.currentDropTarget {
+    background-color: rgba(68, 157, 68, 0.9);
+}
+.org-chart ul li .oc-node.selected {
+    background-color: rgba(238, 217, 54, 0.5);
+}
+.org-chart ul li .oc-node:hover {
+    background-color: rgba(238, 217, 54, 0.5);
+}
+
+/* oci means organization chart icons */
+.oci {
+    display: inline-block;
+    position: relative;
+    font-style: normal;
+    font-family: Arial;
+}
+
+.oci-chevron-up::before {
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: text-bottom;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-width: 0 0.2rem 0.2rem 0;
+    border-style: solid;
+    border-color: #000;
+    background: transparent;
+    transform: rotate(-135deg);
+}
+
+.oci-chevron-down::before {
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-width: 0 0.2rem 0.2rem 0;
+    border-style: solid;
+    border-color: #000;
+    background: transparent;
+    transform: rotate(45deg);
+}

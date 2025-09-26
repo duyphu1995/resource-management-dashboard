@@ -1,0 +1,64 @@
+.structure-tree {
+    width: 100%;
+    overflow: auto;
+    transition: 'height 0.3s';
+
+    .ant-tree-treenode {
+        width: 100%;
+    }
+}
+
+.tree-title-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .tree-title-button {
+        display: flex;
+        align-items: center;
+        visibility: hidden;
+
+        .ant-tree-node-content-wrapper {
+            margin-right: 0px;
+            padding-right: 30px;
+        }
+
+        &__hover {
+            visibility: unset;
+        }
+    }
+}
+
+.tree-select-parent-unit {
+    width: inherit !important;
+}
+
+.pa-tool-container {
+    display: flex;
+    align-items: center;
+
+    .ant-form-item {
+        width: unset !important;
+    }
+}
+
+.left-content-skeleton {
+    .ant-skeleton.ant-skeleton-element {
+        .ant-skeleton-button-sm {
+            max-width: 32px;
+            min-width: 32px;
+            width: 32px;
+        }
+    }
+    .ant-space {
+        .ant-space-item {
+            &:nth-child(2) {
+                min-width: 84%;
+            }
+        }
+    }
+}
+
+.dialog-information__item-description {
+    flex-basis: 100% !important;
+}

@@ -1,0 +1,17 @@
+.attrition-tab {
+    &__header {
+        h6.title {
+            margin-bottom: 16px !important;
+        }
+
+        .attrition-tab__chart {
+            border: 1px solid $border-color-grey;
+            margin-top: 24px;
+
+            .chart-item__header {
+                padding: 24px;
+                border-bottom: 1px solid #f0f0f0;
+            }
+        }
+    }
+}

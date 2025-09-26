@@ -1,0 +1,52 @@
+.employee-project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-bottom: 24px;
+
+    .header-total {
+        flex: 1;
+
+        display: flex;
+        gap: 16px;
+
+        &__item {
+            border: 1px solid #dfdfdf;
+            border-radius: 4px;
+            overflow: hidden;
+
+            .label {
+                background: #f8f8f8;
+                padding: 8px 16px;
+                text-align: center;
+                color: #767676;
+
+                font-family: $font-family;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+            }
+
+            .value {
+                padding: 12px 16px;
+                padding-bottom: 8px;
+                text-align: center;
+                color: #1e6d98;
+
+                font-family: $font-family;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 130%;
+            }
+        }
+    }
+
+    .header-btn {
+        width: 200px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

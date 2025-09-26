@@ -1,0 +1,93 @@
+export interface IStaffGradeIndexReport {
+    createdOn: string;
+    year: number;
+    month: number;
+    week: number;
+    projectName: string;
+    programName: string;
+    dcName: string;
+    dgName: string;
+    isDG: boolean;
+    isCountTotal: boolean;
+    buName: string;
+    staffGradeIndex: number;
+    effortGrade1: number;
+    effortGrade2: number;
+    effortGrade3: number;
+    effortGrade4: number;
+    effortGrade5: number;
+    effortGrade6: number;
+    effortGrade7: number;
+    effortGrade8: number;
+    effortGrade9: number;
+    effortGrade10: number;
+    effortGrade11: number;
+    effortGrade12: number;
+    effortGrade13: number;
+    effortGrade14: number;
+    effortGrade15: number;
+    effortGrade16: number;
+    grade1: number;
+    grade2: number;
+    grade3: number;
+    grade4: number;
+    grade5: number;
+    grade6: number;
+    grade7: number;
+    grade8: number;
+    grade9: number;
+    grade10: number;
+    grade11: number;
+    grade12: number;
+    grade13: number;
+    grade14: number;
+    grade15: number;
+    grade16: number;
+}
+
+export interface IEffortGradeSummaryChart {
+    reportId: number;
+    dcName: string;
+    isDG: boolean;
+    isCountTotal: boolean;
+    staffGradeIndex: number;
+    staffGradeIndex: number;
+    effortGrade1: number;
+    effortGrade2: number;
+    effortGrade3: number;
+    effortGrade4: number;
+    effortGrade5: number;
+    effortGrade6: number;
+    effortGrade7: number;
+    effortGrade8: number;
+    effortGrade9: number;
+    effortGrade10: number;
+    effortGrade11: number;
+    effortGrade12: number;
+    effortGrade13: number;
+    effortGrade14: number;
+    effortGrade15: number;
+    effortGrade16: number;
+    grade1: number;
+    grade2: number;
+    grade3: number;
+    grade4: number;
+    grade5: number;
+    grade6: number;
+    grade7: number;
+    grade8: number;
+    grade9: number;
+    grade10: number;
+    grade11: number;
+    grade12: number;
+    grade13: number;
+    grade14: number;
+    grade15: number;
+    grade16: number;
+}
+
+export interface IExportStaffGradeIndexParams {
+    fromDate: string;
+    toDate: string;
+    unitTypeLevel: string;
+}

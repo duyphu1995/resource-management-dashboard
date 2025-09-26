@@ -1,0 +1,31 @@
+.add-shared-service-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.add-shared-service-container {
+    .shared-service-unit {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+.add-shared-service-details {
+    margin-top: 20px;
+    .add-shared-service-data {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px 121px;
+
+        .add-shared-service-unit {
+            width: 115px;
+        }
+    }
+}
+
+.location-contractor__form {
+    width: 300px;
+}

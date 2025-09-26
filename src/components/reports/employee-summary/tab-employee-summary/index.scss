@@ -1,0 +1,33 @@
+.table-dg-summary-report {
+    .ant-table-selection-col {
+        width: 52px !important;
+    }
+
+    .ant-table-tbody {
+        .table-padding-0 {
+            padding: 0 !important;
+        }
+
+        .table-tr {
+            .table-td {
+                height: 40px;
+                border-bottom: 1px solid #e8e8e8;
+                padding: 0 16px;
+                transition:
+                    background 0.2s,
+                    border-color 0.2s;
+            }
+            &:last-child {
+                .table-td {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .ant-table-cell-row-hover {
+            .table-td {
+                background: transparent !important;
+            }
+        }
+    }
+}

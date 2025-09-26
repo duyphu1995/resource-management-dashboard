@@ -1,0 +1,230 @@
+/* Tree select dropdown */
+div.ant-tree-select-dropdown div.ant-select-tree {
+    /* Tree node list */
+    div.ant-select-tree-list {
+        /* Tree node item */
+        div.ant-select-tree-treenode {
+            position: relative;
+            align-items: unset !important;
+
+            border-radius: 4px;
+            padding: 4px 0 0 16px !important;
+
+            /* The first children of item */
+            &:nth-child(1) {
+                padding-top: 0 !important;
+
+                &::before {
+                    height: 100%;
+                }
+            }
+
+            /* Block indent unit */
+            span.ant-select-tree-indent .ant-select-tree-indent-unit {
+                width: 20px;
+            }
+
+            /* Tree node switcher */
+            span.ant-select-tree-switcher {
+                display: flex;
+                align-items: center;
+                width: 20px;
+                height: 20px;
+                top: 10px;
+
+                &:has(svg) {
+                    .ant-select-tree-switcher-icon {
+                        width: 100%;
+                        height: 100%;
+                        background: url('/media/icons/chevron-right-gray.svg') no-repeat;
+                        background-size: 100%;
+                        transition: all 0.2s ease;
+                    }
+
+                    /* Hover switcher */
+                    &:hover {
+                        background-color: $bg-dropdown-active;
+                    }
+                }
+
+                /* Switcher icon */
+                .ant-select-tree-switcher-icon svg {
+                    display: none;
+                }
+
+                /* Switcher open => rotate icon */
+                &.ant-select-tree-switcher_open .ant-select-tree-switcher-icon {
+                    transform: rotate(90deg);
+                }
+            }
+
+            /* Tree node checkbox */
+            .ant-select-tree-checkbox {
+                display: flex;
+                align-items: center;
+                align-self: unset;
+                padding: 10px 8px 10px 10px;
+                margin-right: 0px;
+                margin-top: 0;
+
+                .ant-select-tree-checkbox-input {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .ant-select-tree-checkbox-inner {
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+
+                    &::before {
+                        position: absolute;
+                        left: -1px;
+                        top: -1px;
+                        display: block;
+                        content: '';
+
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                & + span {
+                    padding: 0 16px;
+                }
+
+                /* Option checkbox checked */
+                &.ant-select-tree-checkbox-checked {
+                    .ant-select-tree-checkbox-inner {
+                        position: relative;
+                        background: unset;
+
+                        width: 20px;
+                        height: 20px;
+
+                        &::after {
+                            display: none;
+                        }
+
+                        &::before {
+                            background: url('/media/icons/checkbox-active.svg') no-repeat;
+                            background-size: 100%;
+                        }
+                    }
+                }
+
+                /* Options checkbox disable */
+                &.ant-select-tree-checkbox-disabled {
+                    background-color: #d5d5d5;
+
+                    .ant-select-tree-checkbox-inner::before {
+                        background: url('/media/icons/checkbox-disable.svg') no-repeat;
+                        background-size: 100%;
+                    }
+                }
+
+                /* Hover checkbox */
+                &:hover {
+                    .ant-select-tree-checkbox {
+                        .ant-select-tree-checkbox-inner {
+                            border: 1px solid $border-button-hover-default;
+                        }
+                    }
+                }
+            }
+
+            /* Content wrapper */
+            span.ant-select-tree-node-content-wrapper {
+                padding: 8px 16px 8px 0;
+                margin-left: 8px;
+                min-height: 40px;
+                line-height: unset;
+                background: transparent;
+            }
+
+            /* Has checkbox */
+            :has(> .ant-select-tree-checkbox) {
+                span.ant-select-tree-node-content-wrapper {
+                    margin-left: 0px;
+                }
+            }
+
+            /* Item background */
+            &::before {
+                display: block;
+                content: '';
+                z-index: 0;
+
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                width: 100%;
+                height: calc(100% - 4px);
+
+                border-radius: 4px;
+                background: white;
+                transition: all 0.5s ease;
+            }
+
+            /* Hover checkbox */
+            &:hover {
+                /* Background checkbox when hover */
+                &::before {
+                    background: $bg-dropdown-hover;
+                }
+
+                .ant-select-tree-node-content-wrapper {
+                    background: none;
+                }
+            }
+
+            /* Checkbox indeterminate */
+            &.ant-select-tree-treenode-checkbox-indeterminate {
+                .ant-select-tree-checkbox-indeterminate {
+                    span.ant-select-tree-checkbox-inner {
+                        &::after {
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                }
+            }
+
+            /* Active item */
+            &.ant-select-tree-treenode-active,
+            &:active {
+                &::before {
+                    background: $bg-dropdown-active !important;
+                }
+
+                &.ant-select-tree-treenode-checkbox-checked {
+                    &::before {
+                        background: $bg-dropdown-selected-active !important;
+                    }
+                }
+
+                .ant-select-tree-node-content-wrapper {
+                    outline: unset;
+                }
+            }
+
+            /* Selected item */
+            &.ant-select-tree-treenode-selected {
+                &::before {
+                    background: $bg-dropdown-selected;
+                }
+            }
+        }
+    }
+
+    /* Scrollbar */
+    .ant-select-tree-list-scrollbar.ant-select-tree-list-scrollbar-vertical {
+        width: 4px !important;
+        right: -6px !important;
+
+        .ant-select-tree-list-scrollbar-thumb {
+            background: #c0c0c0 !important;
+        }
+    }
+}

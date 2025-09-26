@@ -1,0 +1,118 @@
+.resignation-tab {
+    .resignation-tab__header {
+        h6.title {
+            margin-bottom: 12px !important;
+        }
+    }
+
+    .resignation-tab__note {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .resignation-tab__chart {
+        margin-top: 16px;
+
+        display: flex;
+        gap: 16px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .chart-item {
+            flex: 1;
+
+            border-radius: 4px;
+            border: 1px solid #dfdfdf;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__header {
+                padding: 24px 24px 16px 24px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 95%;
+                    height: 1px;
+                    background-color: #f0f0f0;
+                }
+
+                h6.title {
+                    color: #000;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+
+                    margin-bottom: 0 !important;
+                }
+
+                .download-btn {
+                    &:hover .anticon-down {
+                        transform: rotate(180deg);
+                        transition: transform 0.3s;
+                    }
+
+                    span:first-child {
+                        color: #2a9ad6;
+
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%;
+                    }
+
+                    svg {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .g2-tooltip {
+        background-color: #000 !important;
+
+        &-title {
+            color: #fff !important;
+            text-align: center;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+        }
+    }
+
+    .antv-pie-legend {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.print-chart-pie-resignation {
+    .ant-dropdown-menu {
+        .ant-dropdown-menu-item {
+            padding: 0 !important;
+
+            .ant-dropdown-menu-title-content {
+                button {
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

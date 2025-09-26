@@ -1,0 +1,53 @@
+@mixin flex-box--default($align: flex-start, $justify: flex-start, $flow: row nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-flow: $flow;
+}
+
+@mixin txt-styles($size: 14px, $f-weight: 400, $color: $txt-default, $line-h: 140%) {
+    font-size: $size;
+    font-weight: $f-weight;
+    color: $color;
+    line-height: $line-h;
+    font-style: normal;
+}
+
+@mixin tag-color($color: $txt-success, $bg-color: $bg-success, $border-color: $txt-success) {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color;
+}
+
+@mixin min-height-table($height) {
+    .min-h-#{$height} {
+        .ant-table-body {
+            min-height: #{$height}px;
+        }
+    }
+}
+
+@mixin font-weight($bold) {
+    .font-weight-#{$bold} {
+        font-weight: #{$bold} !important;
+    }
+}
+
+@mixin w($px) {
+    .w-#{$px} {
+        width: #{$px}px !important;
+    }
+}
+
+@mixin c($color) {
+    $color-name: str-slice(unquote('#{$color}'), 2);
+    .c-#{$color-name} {
+        color: #{$color} !important;
+    }
+}
+
+@mixin color-border($color, $index) {
+    .border-bottom-color-#{$index} {
+        border-bottom: 5px solid $color !important;
+    }
+}

@@ -1,0 +1,58 @@
+.dialog {
+    max-width: 1300px;
+    width: 100% !important;
+
+    .dialog-title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: unset;
+        }
+
+        span {
+            color: #767676;
+        }
+    }
+
+    .dialog-content {
+        th {
+            background-color: $color-whisper !important;
+        }
+    }
+}
+
+.dialog-empty {
+    max-width: 407px;
+    width: 100% !important;
+    text-align: center;
+
+    .dialog-title {
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: unset;
+        }
+    }
+
+    .dialog-content {
+        img {
+            max-width: 120px;
+            height: auto;
+        }
+
+        span {
+            color: #767676;
+            display: block;
+        }
+    }
+}
+
+.dialog-button {
+    display: flex;
+    justify-content: center;
+}

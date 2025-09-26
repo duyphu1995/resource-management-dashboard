@@ -1,0 +1,89 @@
+.staff-grade-index-report-programs-table {
+    .ant-table-container {
+        .ant-table-header {
+            .ant-table-thead {
+                .grade-row-index {
+                    .ant-table-cell {
+                        background-color: #eaeaea;
+                        &::before {
+                            content: unset !important;
+                        }
+                    }
+                }
+                .table-header-row {
+                    .ant-table-cell {
+                        background-color: $color-whisper;
+                    }
+                    .table-header-column {
+                        &::before {
+                            background-color: #dfdfdf !important;
+                            height: 4.3em !important;
+                        }
+                    }
+                }
+                .effort-grade-column {
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        inset-inline-end: 0;
+                        width: 1px;
+                        height: 1.6em;
+                        background-color: #dfdfdf;
+                        transform: translateY(-15%);
+                        transition: background-color 0.2s;
+                        content: '';
+                    }
+                    border-bottom: 1px solid #dfdfdf !important;
+                }
+                .grade-column {
+                    border-bottom: 1px solid #dfdfdf !important;
+                }
+                .grade-row-index {
+                    .ant-table-cell:nth-child(16) {
+                        border-right: 1px solid #dfdfdf;
+                    }
+                }
+            }
+        }
+
+        .ant-table-body {
+            .ant-table-tbody {
+                .ant-table-row {
+                    .ant-table-cell:nth-child(20) {
+                        border-right: 1px solid #dfdfdf;
+
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            right: -2px;
+                            width: 2px;
+                            height: 102%;
+                            background-color: #dfdfdf;
+                            transform: translateY(0);
+                            transition: background-color 0.2s;
+                            z-index: 99;
+                            content: '';
+                        }
+                    }
+                }
+                .group-department-row {
+                    .ant-table-cell {
+                        background-color: #eaf5fb;
+                    }
+                }
+                .table-row-total {
+                    .ant-table-cell {
+                        background-color: #eaeaea;
+                        font-weight: 500;
+                    }
+                    &.table-row-dark {
+                        .ant-table-cell {
+                            background-color: #dfdfdf;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

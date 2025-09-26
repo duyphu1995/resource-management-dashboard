@@ -1,0 +1,16 @@
+.employee-management {
+    .table-header {
+        display: flex;
+        flex-direction: column;
+
+        flex-wrap: wrap;
+
+        .ant-tabs-content-holder {
+            display: none;
+        }
+
+        &__tabs {
+            width: 100%;
+        }
+    }
+}

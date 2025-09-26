@@ -1,0 +1,54 @@
+.contractor-statistic-report {
+    .generated-time {
+        font-weight: 500;
+    }
+
+    .box-form-group {
+        .box-form-title::before {
+            content: unset !important;
+        }
+    }
+
+    .box-row-group {
+        display: flex;
+        align-items: center;
+
+        & > div {
+            flex: 1;
+            max-width: 50%;
+
+            .ant-table-thead {
+                tr {
+                    .border-bottom-blue {
+                        border-bottom: 5px solid #074c74 !important;
+                    }
+
+                    $colors: (#008000, #aa4643);
+                    @for $i from 1 through length($colors) {
+                        $color: nth($colors, $i);
+                        @include color-border($color, $i);
+                    }
+                }
+            }
+        }
+    }
+
+    .toggle-details-btn {
+        margin: 32px 0 24px 0 !important;
+    }
+
+    .table-details {
+        .ant-table-thead {
+            .ant-table-cell {
+                text-align: center;
+            }
+        }
+
+        .ant-table-footer {
+            text-align: end;
+            font-weight: 500;
+            font-size: 16px;
+            padding-right: 84px;
+        }
+    }
+}

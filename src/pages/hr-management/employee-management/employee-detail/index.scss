@@ -1,0 +1,32 @@
+.ant-tabs-content {
+    padding: 24px;
+    background-color: #ffffff;
+}
+
+.detail-layout {
+    background-color: #ffffff !important;
+    flex-direction: row;
+    gap: 24px;
+    padding: 24px;
+
+    position: relative;
+    .bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        &.bg-group {
+            background-image: url('/media/employee-detail/bg-group.svg');
+            width: 380px;
+            height: 306px;
+        }
+    }
+}
+
+.ant-select-in-form-item {
+    height: 40px;
+}

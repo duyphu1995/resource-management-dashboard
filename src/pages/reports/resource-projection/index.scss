@@ -1,0 +1,34 @@
+.resource-projection {
+    .table-header-column {
+        background-color: #9cf !important;
+        text-align-last: center;
+        border: none !important;
+
+        &-child {
+            background-color: #cce5ff !important;
+            text-align: center !important;
+        }
+    }
+
+    .total-row {
+        background-color: #e6e6e6;
+
+        td {
+            font-weight: 500 !important;
+        }
+    }
+
+    .dg-row {
+        background-color: #ffe6cc;
+
+        td {
+            font-weight: 500 !important;
+
+            &:first-child,
+            &:nth-child(8),
+            &:nth-child(9) {
+                background-color: #cce5ff !important;
+            }
+        }
+    }
+}
